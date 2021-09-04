@@ -48,30 +48,31 @@ class LinkedList:
     def __iter__(self):  # note: Includes previous elements in the list
         current_node = self.get_head()
         while current_node:
-            yield current_node.data
+            yield current_node
             current_node = current_node.next
 
     def search(self, bool_func):
-        for data in self:
-            if bool_func(data):
-                return data
+        for node in self:
+            if bool_func(node.data):
+                return node.data
 
     def __contains__(self, item):
-        for data in self:
-            if data == item:
+        for node in self:
+            # TODO: stop making assumptions about data without enforcing them
+            if node.data is not None and node.data[0] == item:
                 return True
 
         return False
 
     def __str__(self):
         string = ''
-        for data in self:
-            string += f'{data} --> '
+        for node in self:
+            string += f'{node.data} --> '
 
         return string[:len(string)-5]
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     example = LinkedList(data=1)
     for x in range(2, 50):
         example.insert(x)
