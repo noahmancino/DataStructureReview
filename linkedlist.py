@@ -25,4 +25,18 @@ class LinkedList:
         return self.head.value is None
 
     def __iter__(self):
+        if self.is_empty():
+            yield None
+        else:
+            curr_node = self.head
+            while curr_node is not None:
+                yield curr_node.value
+                curr_node = curr_node.next
+
+
+example = LinkedList(head=Node(5))
+example.head.set_next(Node(23))
+
+for a in example:
+    print(a)
 
