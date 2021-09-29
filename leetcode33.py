@@ -1,5 +1,6 @@
 '''
 Lightly disguised binary search. Coding it out took awhile and it's not pretty but I got the idea pretty fast, I think.
+Probably breaks for some edge cases but can't be bothered to thorough test it at the moment
 '''
 
 

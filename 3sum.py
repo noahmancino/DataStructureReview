@@ -1,6 +1,5 @@
 '''
-This works n^2 time. If you want to remove duplicate numbers instead of duplicate coordinates, that is
-trivial (add sets to the set instead of adding tuples to the set). Missed the optimal method but better than brute
+This works n^2 time. If you want to remove duplicate numbers instead of duplicate coordinates, that is trivial (add sets to the set instead of adding tuples to the set). Missed the optimal method but better than brute
 force.
 '''
 
