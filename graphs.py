@@ -48,6 +48,34 @@ class Graph:
         df.set_axis(self.values(), axis=0, inplace=True)
         return str(df)
 
+    @staticmethod
+    def dfs(vertex, visited=None):
+        if visited is None:
+            visited = []
 
-example = [[10, 11, 12, 13], [[0, 1, 1, 1], [1, 0, 1, 1], [1, 1, 0, 1], [1, 1, 1, 0]]]
+        visited.append(vertex)
+        for neighbor in vertex.neighbors:
+            if neighbor not in visited:
+                Graph.dfs(neighbor, visited)
+        return visited
 
+    @staticmethod
+    def bfs(queue):
+        '''
+        No one is using this but me. Not bothering with helper methods. Just call it with a vertex in a list.
+        '''
+        visited = []
+        while queue:
+            vertex = queue.pop(0)
+            visited.append(vertex)
+            for neighbor in vertex.neighbors:
+                if neighbor not in queue and neighbor not in visited:
+                    queue.append(neighbor)
+
+        return visited
+
+
+
+example = [[10, 11, 12, 13], [[0, 1, 0, 1], [0, 0, 0, 0], [1, 1, 0, 1], [0, 0, 1, 0]]]
+example = Graph(example)
+print([node.value for node in Graph.bfs([example.nodes[0]])])
