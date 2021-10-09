@@ -17,7 +17,9 @@ class LinkedList():
     """
     A singly linked list implementation. Iterable.
     """
-    def __init__(self, head=Node(None)):
+    def __init__(self, head=None):
+        if head is None:
+            head = Node(None)
         if isinstance(head, Node):
             self.head = head
         else:
@@ -44,12 +46,13 @@ class LinkedList():
     def insert(self, value):
         if self.is_empty():
             self.head.value = value
-            return
+            return self
 
         curr_node = self.head
         while curr_node.next is not None:
             curr_node = curr_node.next
         curr_node.next = Node(value)
+        return self
 
     def pop(self):
         if self.head.next is None:
