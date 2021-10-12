@@ -1,5 +1,6 @@
 '''
-This took me about an hour to write. It runs in six minutes on my machine for n=9
+This took me about an hour to write. It runs in six minutes on my machine for n=9. I felt okay about it
+until I checked leetcode and saw a very pretty and fast solution involving dfs that I didn't think of.
 '''
 
 import copy
