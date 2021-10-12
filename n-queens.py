@@ -3,7 +3,8 @@ This took me about an hour to write. It runs in about 1 minute and 40 seconds on
 This was a case were I finished a semi-naive solution (backtracking) and realized I needed to optimize it.
 I didn't have to think hard to find optimizations, but every time I would finish on an optimization I realized
 that there was a better way to do it. The backtracking could always check one row at a time, but I was too
-lazy to implement that.
+lazy to implement that. I feel like I got enough out of this ugly, partial solution so I'm not doing any further
+optimizations.
 '''
 import copy
 
