@@ -1,5 +1,5 @@
 '''
-This one took me too long and even taking too long, my solution is ugly. Actually most of my time was spent debugging
+This one took me too long (~50 minutes) and even taking too long, my solution is ugly. Actually most of my time was spent debugging
 things that showed my python knowledge was rusty rather than actually making an algorithmic mistake. This also brings
 back vague memories of the catalan sequence in my discrete mathematics class.
 '''
